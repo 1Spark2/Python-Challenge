@@ -15,8 +15,8 @@ python main.py
 
 # Usando Docker
 
-docker build -t <nombre-de-la-imagen> .
+docker build -t "nombre-de-la-imagen" .
 
-docker run -it --name #nombre-para-tu-contenedor# #nombre-de-la-imagen#
+docker run -it --name "nombre-para-tu-contenedor" "nombre-de-la-imagen#"
 
 # Nota: iniciar el contenedor con el parametro "-it" para que entre a la terminal interactiva.
