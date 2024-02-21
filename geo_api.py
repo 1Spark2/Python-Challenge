@@ -1,10 +1,11 @@
 import requests
 
 class GeoAPI:
-    API_KEY = "1074e3185236c2e36b519885bbb220cc"
+    API_KEY = "d81015613923e3e435231f2740d5610b"
     LAT = "-35.836948753554054"
     LON = "-61.870523905384076"
 
+    # Peticio get para obtener la temperatura actual de Pehuajo
     @classmethod
     def is_hot_in_pehuajo(cls):
         url = f"https://api.openweathermap.org/data/2.5/weather?lat={cls.LAT}&lon={cls.LON}&appid={cls.API_KEY}"
@@ -19,10 +20,5 @@ class GeoAPI:
             else:
                 return False
         else:
-            print("Failed to retrieve weather data")
-            return False 
-        
-
-
-if __name__ == "__main__":
-    print(GeoAPI.is_hot_in_pehuajo())
+            print("Failed to retrieve weather data") 
+            return False # Devuelve False incluso si tiene un fallo en la peticion http

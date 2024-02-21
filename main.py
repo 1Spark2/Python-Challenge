@@ -1,12 +1,13 @@
-import typer
 from geo_api import GeoAPI
-from chose_products import ShopInterface  # Verifica el nombre del módulo y la importación
+from chose_products import ShopInterface
 from rich import print as rprint
+import typer
 
 
 app = typer.Typer()
-shop_interface = ShopInterface()  # Crea la instancia de ShopInterface fuera de la función
+shop_interface = ShopInterface()  # Crea la instancia de ShopInterface.
 
+#Crear rectangulo para texto.
 def draw_rectangle_around_text(text: str, padding: int = 1):
     lines = text.split('\n')
     max_length = max(len(line) for line in lines)
@@ -17,9 +18,10 @@ def draw_rectangle_around_text(text: str, padding: int = 1):
         typer.echo('|' + line.center(max_length + padding * 2) + '|')
     typer.echo(border_line)
 
+
 @app.command()
 def welcome():
-    temp = GeoAPI.is_hot_in_pehuajo()
+    temp = GeoAPI.is_hot_in_pehuajo() #Recibir la temperatura de Pehuajó.
     message = "¡Hola! Bienvenido a Heladerías Frozen SRL."
     draw_rectangle_around_text(message, 2)
         
@@ -38,6 +40,7 @@ def welcome():
             shop_interface.confirm_order(product_info, final_price)
     else:
         typer.echo("¡Entendido! Esperamos verte en un día más caluroso.")
+
 
 if __name__ == "__main__":
     app()
