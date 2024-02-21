@@ -1,5 +1,5 @@
-from geo_api import GeoAPI
-from chose_products import ShopInterface
+from utils.geo_api import GeoAPI
+from utils.chose_products import ShopInterface
 from rich import print as rprint
 import typer
 
