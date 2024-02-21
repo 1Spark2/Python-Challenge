@@ -1,7 +1,7 @@
 import requests
 
 class GeoAPI:
-    API_KEY = "d81015613923e3e435231f2740d5610b"
+    API_KEY = "INSERT_API"
     LAT = "-35.836948753554054"
     LON = "-61.870523905384076"
 
