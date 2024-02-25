@@ -5,6 +5,8 @@ Hola! Que bueno que estas aqui. Aca esta mi respuesta al challenge, espero te ag
 
 ** Instrucciones **
 
+Nota: Colocar la api_key en el lugar correspondiente en utils/gep_api.py
+
 # Usando un ambiente virtual
 
 python3 -m venv venv
